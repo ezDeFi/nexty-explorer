@@ -36,6 +36,7 @@ defmodule Explorer.Repo do
   """
   def safe_insert_all(kind, elements, opts) do
     returning = opts[:returning]
+    opts = Keyword.put(opts, :on_conflict, :nothing)
 
     elements
     |> Enum.chunk_every(500)
