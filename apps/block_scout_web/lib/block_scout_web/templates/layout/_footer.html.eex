@@ -16,7 +16,7 @@
       <div class="col-xs-12 col-lg-3">
         <p class="footer-info-text"><%= gettext("NextyExplorer is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Nexty Networks.") %></p>
         <div class="footer-social-icons">
-          <a href="https://github.com/nextyio/nexty-scout" rel="noreferrer" target="_blank" class="footer-social-icon" title='<%= gettext("Github") %>'>
+          <a href="https://github.com/nextyio/nexty-explorer" rel="noreferrer" target="_blank" class="footer-social-icon" title='<%= gettext("Github") %>'>
             <i class="fab fa-github"></i>
           </a>
           <a href="https://t.me/nexty_io" rel="noreferrer" target="_blank" class="footer-social-icon" title='<%= gettext("Telegram") %>'>
@@ -29,7 +29,7 @@
         <h3>NextyExplorer</h3>
         <ul>
           <li><a href="<%= issue_link(@conn) %>" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Submit an Issue") %></a></li>
-          <li><a href="https://github.com/nextyio/nexty-scout" rel="noreferrer" class="footer-link"><%= gettext("Contribute") %></a></li>
+          <li><a href="https://github.com/nextyio/nexty-explorer" rel="noreferrer" class="footer-link"><%= gettext("Contribute") %></a></li>
           <li><a href="https://t.me/nexty_io" rel="noreferrer" class="footer-link"><%= gettext("Chat") %></a></li>
         </ul>
       </div>

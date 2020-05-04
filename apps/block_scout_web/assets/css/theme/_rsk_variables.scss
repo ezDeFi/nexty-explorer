@@ -59,7 +59,7 @@ $card-tab-active: $secondary;
     }
 
     .footer-logo {
-      filter: brightness(0) invert(1);
+      filter: brightness(1) invert(100) saturate(0.3);
     }
 }
 

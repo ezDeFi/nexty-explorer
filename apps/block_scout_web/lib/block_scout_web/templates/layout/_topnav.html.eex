@@ -14,7 +14,7 @@
     <% end %>   
     <script>
       if (localStorage.getItem("current-color-mode") === "dark") {
-        document.getElementById("navbar-logo").style.filter = "brightness(0) invert(1)";
+        document.getElementById("navbar-logo").style.filter = "brightness(1) invert(100) saturate(0.3)";
       }
     </script>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="<%= gettext("Toggle navigation") %>">

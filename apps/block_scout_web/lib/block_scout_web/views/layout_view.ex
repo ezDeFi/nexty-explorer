@@ -4,7 +4,7 @@ defmodule BlockScoutWeb.LayoutView do
   alias Plug.Conn
   alias Poison.Parser
 
-  @issue_url "https://github.com/nextyio/nexty-scout/issues/new"
+  @issue_url "https://github.com/nextyio/nexty-explorer/issues/new"
   @default_other_networks [
     %{
       title: "Nexty Mainnet",

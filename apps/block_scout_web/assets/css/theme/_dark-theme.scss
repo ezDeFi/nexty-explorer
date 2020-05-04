@@ -39,7 +39,7 @@ $labels-dark: #8a8dba; // header nav, labels
 		background-color: $dark-light-bg;
 	}
 	.navbar-brand .navbar-logo {
-		filter: brightness(0) invert(1);
+		filter: brightness(1) invert(100) saturate(0.3);
 	}
 	.navbar.navbar-primary .navbar-nav .nav-link {
 		color: $labels-dark;
@@ -426,7 +426,7 @@ $labels-dark: #8a8dba; // header nav, labels
 
 	// coin balance history chart
 	.chartjs-render-monitor[data-chart="coinBalanceHistoryChart"] {
-		filter: brightness(0) invert(1) !important;
+		filter: brightness(1) invert(100) saturate(0.3) !important;
 	}
 
 	// logs search
