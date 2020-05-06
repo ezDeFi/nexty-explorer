@@ -47,3 +47,4 @@ screenshots/
 .elixir_ls
 
 explorer.sh
+explorer.remote.sh

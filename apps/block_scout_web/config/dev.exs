@@ -81,3 +81,6 @@ config :logger, :block_scout_web,
 # Set a higher stacktrace during development. Avoid configuring such
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
+
+config :block_scout_web, BlockScoutWeb.Endpoint,
+  show_sensitive_data_on_connection_error: true

@@ -35,7 +35,7 @@ defmodule EthereumJSONRPC.DecodeError do
     %EthereumJSONRPC.DecodeError{request: request, response: response}
   end
 
-  @request_body_limit 700
+  @request_body_limit 7000
 
   @impl Exception
   def message(%EthereumJSONRPC.DecodeError{
