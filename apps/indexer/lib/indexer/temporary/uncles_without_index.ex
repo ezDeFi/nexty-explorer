@@ -138,7 +138,7 @@ defmodule Indexer.Temporary.UnclesWithoutIndex do
 
   defp loggable_errors(errors) when is_list(errors) do
     Enum.filter(errors, fn
-      %{code: 404, message: "Not Found"} -> false
+      %{code: 404, message: "uncles_without_index: Not Found"} -> false
       _ -> true
     end)
   end

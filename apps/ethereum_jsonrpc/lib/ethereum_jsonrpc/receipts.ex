@@ -221,7 +221,7 @@ defmodule EthereumJSONRPC.Receipts do
 
   defp response_to_receipt(%{id: id, result: nil}, id_to_transaction_params) do
     data = Map.fetch!(id_to_transaction_params, id)
-    {:error, %{code: -32602, data: data, message: "Not Found"}}
+    {:error, %{code: -32602, data: data, message: "receipts: Not Found"}}
   end
 
   defp response_to_receipt(%{id: id, result: receipt}, id_to_transaction_params) do

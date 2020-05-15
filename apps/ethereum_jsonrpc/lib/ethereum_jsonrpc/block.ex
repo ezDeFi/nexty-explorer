@@ -71,7 +71,7 @@ defmodule EthereumJSONRPC.Block do
   def from_response(%{id: id, result: nil}, id_to_params) when is_map(id_to_params) do
     params = Map.fetch!(id_to_params, id)
 
-    {:error, %{code: 404, message: "Not Found", data: params}}
+    {:error, %{code: 404, message: "block: Not Found", data: params}}
   end
 
   def from_response(%{id: id, result: block}, id_to_params) when is_map(id_to_params) do

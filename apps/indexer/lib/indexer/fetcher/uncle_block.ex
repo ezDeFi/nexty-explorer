@@ -233,7 +233,7 @@ defmodule Indexer.Fetcher.UncleBlock do
 
   defp loggable_errors(errors) when is_list(errors) do
     Enum.filter(errors, fn
-      %{code: 404, message: "Not Found"} -> false
+      %{code: 404, message: "uncle_block: Not Found"} -> false
       _ -> true
     end)
   end

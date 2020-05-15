@@ -94,7 +94,7 @@ defmodule EthereumJSONRPC.Parity.FetchedBeneficiaries do
   defp response_to_params_set(%{id: id, result: nil}, id_to_params) when is_map(id_to_params) do
     %{block_quantity: block_quantity} = Map.fetch!(id_to_params, id)
 
-    {:error, %{code: 404, message: "Not Found", data: %{block_quantity: block_quantity}}}
+    {:error, %{code: 404, message: "fetched_beneficiaries: Not Found", data: %{block_quantity: block_quantity}}}
   end
 
   @spec response_to_params_set(%{id: id, result: list(map())}, %{id => %{block_quantity: block_quantity}}) ::
