@@ -1,6 +1,6 @@
 $body-dark: #1c1d31; // body background
 $dark-bg: #22223a; // hero shade
-$dark-light-bg: #282945; // pills bg shade
+$dark-light-bg: #082755; // pills bg shade
 $dark-light: #313355; // tile light top share
 $labels-dark: #8a8dba; // header nav, labels
 
@@ -39,7 +39,7 @@ $labels-dark: #8a8dba; // header nav, labels
 		background-color: $dark-light-bg;
 	}
 	.navbar-brand .navbar-logo {
-		filter: brightness(0) invert(1);
+		filter: brightness(1) invert(100) saturate(0.3);
 	}
 	.navbar.navbar-primary .navbar-nav .nav-link {
 		color: $labels-dark;
@@ -182,6 +182,9 @@ $labels-dark: #8a8dba; // header nav, labels
 	}
 	.tile.tile-type-block .tile-transaction-type-block a {
 		color: #fff;
+	}
+	.tile.tile-type-transaction span {
+		color: #4b9b8e !important;
 	}
 	.fade-up-blocks-chain .tile-type-block-animation {
 		background-color: $dark-light;
@@ -423,7 +426,7 @@ $labels-dark: #8a8dba; // header nav, labels
 
 	// coin balance history chart
 	.chartjs-render-monitor[data-chart="coinBalanceHistoryChart"] {
-		filter: brightness(0) invert(1) !important;
+		filter: brightness(1) invert(100) saturate(0.3) !important;
 	}
 
 	// logs search

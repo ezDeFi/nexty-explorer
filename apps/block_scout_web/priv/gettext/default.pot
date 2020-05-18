@@ -246,7 +246,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/block_scout_web/templates/layout/_footer.html.eex:17
-msgid "Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks."
+msgid "NextyExplorer is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Nexty Networks."
 msgstr ""
 
 #, elixir-format
@@ -560,22 +560,22 @@ msgstr ""
 #, elixir-format
 #: lib/block_scout_web/views/transaction_view.ex:136
 msgid "ERC-20 "
-msgstr ""
+msgstr "nERC-20"
 
 #, elixir-format
 #: lib/block_scout_web/views/transaction_view.ex:137
 msgid "ERC-721 "
-msgstr ""
+msgstr "nERC-721"
 
 #, elixir-format
 #: lib/block_scout_web/templates/smart_contract/_functions.html.eex:50
 msgid "ETH"
-msgstr ""
+msgstr "NTY"
 
 #, elixir-format
 #: lib/block_scout_web/templates/api_docs/eth_rpc.html.eex:4
 msgid "ETH RPC API Documentation"
-msgstr ""
+msgstr "Nexty RPC API Documentation"
 
 #, elixir-format
 #: lib/block_scout_web/templates/address_contract/index.html.eex:45
@@ -638,7 +638,7 @@ msgstr ""
 #, elixir-format
 #: lib/block_scout_web/templates/layout/_topnav.html.eex:95
 msgid "Eth RPC"
-msgstr ""
+msgstr "Nexty RPC"
 
 #, elixir-format
 #: lib/block_scout_web/templates/address/_balance_card.html.eex:15
@@ -650,7 +650,7 @@ msgstr ""
 #: lib/block_scout_web/templates/transaction/overview.html.eex:255
 #: lib/block_scout_web/views/wei_helpers.ex:78
 msgid "Ether"
-msgstr ""
+msgstr "NTY"
 
 #, elixir-format
 #: lib/block_scout_web/templates/api_docs/_action_tile.html.eex:211
@@ -1416,13 +1416,13 @@ msgstr ""
 
 #, elixir-format
 #: lib/block_scout_web/templates/api_docs/index.html.eex:6
-msgid "This API is provided for developers transitioning their applications from Etherscan to BlockScout. It supports GET and POST requests."
+msgid "This API is provided for developers transitioning their applications from NextyExplorer to BlockScout. It supports GET and POST requests."
 msgstr ""
 
 #, elixir-format
 #: lib/block_scout_web/templates/api_docs/eth_rpc.html.eex:7
 msgid "This API is provided to support some rpc methods in the exact format specified for ethereum nodes, which can be found "
-msgstr ""
+msgstr "This API is provided to support some rpc methods in the exact format specified for Nexty nodes, which can be found "
 
 #, elixir-format
 #: lib/block_scout_web/views/block_transaction_view.ex:11

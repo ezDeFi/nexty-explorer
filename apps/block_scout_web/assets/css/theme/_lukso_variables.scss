@@ -17,7 +17,7 @@ $footer-item-disc-color: $secondary;
 $footer-social-icon-color: $secondary;
 
 .footer-logo {
-  filter: brightness(0) invert(1);
+  filter: brightness(1) invert(100) saturate(0.3);
 }
 
 // dashboard
@@ -166,7 +166,7 @@ $dark-primary-alternate: #a96c55;
     color: $dark-primary !important;
   }
   .layout-container .dashboard-banner-container {
-    background-color: #282945 !important;
+    background-color: #082755 !important;
   }
   .dashboard-banner-network-plain-container::after {
     box-shadow: none !important;

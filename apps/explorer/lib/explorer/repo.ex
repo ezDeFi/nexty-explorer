@@ -79,11 +79,11 @@ defmodule Explorer.Repo do
             reraise exception, __STACKTRACE__
         end
 
-      if returning do
-        {count + total_count, acc ++ inserted}
-      else
-        {count + total_count, nil}
-      end
+        if returning do
+          {count + total_count, acc ++ inserted}
+        else
+          {count + total_count, nil}
+        end
     end)
   end
 
