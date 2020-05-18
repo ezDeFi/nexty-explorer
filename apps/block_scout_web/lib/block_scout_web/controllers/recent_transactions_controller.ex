@@ -21,8 +21,13 @@ defmodule BlockScoutWeb.RecentTransactionsController do
           paging_options: %PagingOptions{page_size: 5}
         )
 
-      transactions =
-        Enum.map(recent_transactions, fn transaction ->
+      # TODO: page_size = 5 trim all the recent non-consensus tx
+      user_transactions =
+        Enum.filter(recent_transactions, fn transaction ->
+          transaction.from_address_hash != @burn_address_hash
+        end)
+
+      transactions = Enum.map(user_transactions, fn transaction ->
           %{
             transaction_hash: Hash.to_string(transaction.hash),
             transaction_html:

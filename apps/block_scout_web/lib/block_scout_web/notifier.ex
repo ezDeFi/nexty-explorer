@@ -14,6 +14,9 @@ defmodule BlockScoutWeb.Notifier do
   alias Explorer.SmartContract.{Solidity.CodeCompiler, Solidity.CompilerVersion}
   alias Phoenix.View
 
+  {:ok, burn_address_hash} = Chain.string_to_address_hash("0x0000000000000000000000000000000000000000")
+  @burn_address_hash burn_address_hash
+
   def handle_event({:chain_event, :addresses, type, addresses}) when type in [:realtime, :on_demand] do
     Endpoint.broadcast("addresses:new_address", "count", %{count: Chain.address_estimated_count()})
 
@@ -228,9 +231,11 @@ defmodule BlockScoutWeb.Notifier do
   defp broadcast_transaction(transaction, transaction_channel, event) do
     Endpoint.broadcast("transactions:#{transaction.hash}", "collated", %{})
 
-    Endpoint.broadcast(transaction_channel, event, %{
-      transaction: transaction
-    })
+    if transaction.from_address_hash != @burn_address_hash do
+      Endpoint.broadcast(transaction_channel, event, %{
+        transaction: transaction
+      })
+    end
 
     Endpoint.broadcast("addresses:#{transaction.from_address_hash}", event, %{
       address: transaction.from_address,

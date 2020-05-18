@@ -51,21 +51,23 @@ defmodule BlockScoutWeb.TransactionChannel do
   end
 
   def handle_out("transaction", %{transaction: transaction}, socket) do
-    Gettext.put_locale(BlockScoutWeb.Gettext, socket.assigns.locale)
+    if transaction.from_address_hash != @burn_address_hash do
+      Gettext.put_locale(BlockScoutWeb.Gettext, socket.assigns.locale)
 
-    rendered_transaction =
-      View.render_to_string(
-        TransactionView,
-        "_tile.html",
-        transaction: transaction,
-        burn_address_hash: @burn_address_hash,
-        conn: socket
-      )
+      rendered_transaction =
+        View.render_to_string(
+          TransactionView,
+          "_tile.html",
+          transaction: transaction,
+          burn_address_hash: @burn_address_hash,
+          conn: socket
+        )
 
-    push(socket, "transaction", %{
-      transaction_hash: Hash.to_string(transaction.hash),
-      transaction_html: rendered_transaction
-    })
+      push(socket, "transaction", %{
+        transaction_hash: Hash.to_string(transaction.hash),
+        transaction_html: rendered_transaction
+      })
+    end
 
     {:noreply, socket}
   end
