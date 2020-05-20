@@ -61,8 +61,8 @@ defmodule Explorer.Chain.Import.Runner.TokenTransfers do
       Import.insert_changes_list(
         repo,
         ordered_changes_list,
-        on_conflict: :nothing,
         conflict_target: [:transaction_hash, :log_index, :block_hash],
+        on_conflict: on_conflict,
         for: TokenTransfer,
         returning: true,
         timeout: timeout,
